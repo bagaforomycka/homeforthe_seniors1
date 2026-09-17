@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home for the Aged - Login</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: #e9f0df;
+            color: #245f3e;
+        }
+
+        .main-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px;
+            background: linear-gradient(
+                135deg,
+                #edf3e5,
+                #c5d8b4
+            );
+        }
+
+        /* LEFT SIDE */
+
+        .left-section {
+            flex: 1;
+            max-width: 600px;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .logo-circle {
+            width: 120px;
+            height: 120px;
+            background: #247348;
+            color: #e7b33b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 65px;
+            margin: 0 auto 25px;
+            border: 5px solid #d6e5c8;
+        }
+
+        .left-section h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #17623e;
+        }
+
+        .left-section p {
+            font-size: 20px;
+            color: #38734e;
+        }
+
+        /* RIGHT SIDE */
+
+        .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 460px;
+            padding: 42px;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid #a6b99a;
+            border-radius: 28px;
+            box-shadow: 0 10px 30px rgba(43, 74, 44, 0.12);
+        }
+
+        .login-box h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #245f3e;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64806a;
+            margin-bottom: 28px;
+        }
+
+        .login-box form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-box label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #245f3e;
+        }
+
+        .login-box input[type="email"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #9aa890;
+            border-radius: 12px;
+            background: #f9fbf5;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .login-box input:focus {
+            border-color: #247348;
+            box-shadow: 0 0 0 2px #d8e7cd;
+        }
+
+        /* PASSWORD */
+
+        .password-container {
+            position: relative;
+        }
+
+        .password-container input {
+            padding-right: 50px !important;
+        }
+
+        .show-password {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            height: 48px;
+            width: 40px;
+            border: none;
+            background: transparent;
+            color: #245f3e;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* REMEMBER ME */
+
+        .remember-row {
+            margin-bottom: 25px;
+        }
+
+        .remember-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: normal !important;
+        }
+
+        .remember-label input {
+            width: 18px;
+            height: 18px;
+            accent-color: #247348;
+        }
+
+        /* LOGIN BUTTON */
+
+        .login-button {
+            width: 100%;
+            padding: 16px;
+            background: #c6d5a7;
+            border: 1px solid #78905b;
+            color: #245f3e;
+            font-size: 19px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .login-button:hover {
+            background: #afc48b;
+        }
+
+        /* SIGN UP */
+
+        .signup-text {
+            text-align: center;
+            margin-top: 25px;
+            color: #54705b;
+        }
+
+        .signup-text a {
+            color: #245f3e;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 850px) {
+
+            .main-container {
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px;
+            }
+
+            .left-section {
+                padding: 20px;
+            }
+
+            .left-section h1 {
+                font-size: 30px;
+            }
+
+            .left-section p {
+                font-size: 17px;
+            }
+
+            .logo-circle {
+                width: 85px;
+                height: 85px;
+                font-size: 45px;
+            }
+
+            .login-box {
+                padding: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- LEFT SECTION -->
+
+        <div class="left-section">
+
+            <div class="logo-circle">♥</div>
+
+            <h1>Home for the Aged</h1>
+
+            <p>Care Today, Comfort Tomorrow</p>
+
+        </div>
+
+        <!-- RIGHT SECTION -->
+
+        <div class="right-section">
+
+            <div class="login-box">
+
+                <h2>Welcome Back</h2>
+
+                <p class="subtitle">
+                    Login to your account
+                </p>
+
+                <form onsubmit="loginUser(event)">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="password-container">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            onclick="togglePassword()"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+                    <div class="remember-row">
+
+                        <label class="remember-label">
+
+                            <input
+                                type="checkbox"
+                                id="remember"
+                            >
+
+                            Remember me?
+
+                        </label>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+
+                        LOGIN
+
+                    </button>
+
+                </form>
+
+                <p class="signup-text">
+
+                    Don't have an account?
+
+                    <a href="signup.html">
+                        Sign up
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function togglePassword() {
+
+            const password =
+                document.getElementById("password");
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+            } else {
+
+                password.type = "password";
+
+            }
+
+        }
+
+        function loginUser(event) {
+
+            event.preventDefault();
+
+            alert("Login page is ready. Connect PHP and MySQL to verify accounts.");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

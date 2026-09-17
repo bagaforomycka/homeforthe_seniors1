@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home for the Aged - Sign Up</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: #e9f0df;
+            color: #245f3e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+        }
+
+        .signup-box {
+            width: 100%;
+            max-width: 460px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #a6b99a;
+            border-radius: 28px;
+            box-shadow: 0 10px 30px rgba(43, 74, 44, 0.12);
+        }
+
+        .logo-circle {
+            width: 85px;
+            height: 85px;
+            background: #247348;
+            color: #e7b33b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64806a;
+            margin-bottom: 28px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #9aa890;
+            border-radius: 12px;
+            background: #f9fbf5;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #247348;
+            box-shadow: 0 0 0 2px #d8e7cd;
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            background: #c6d5a7;
+            border: 1px solid #78905b;
+            color: #245f3e;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #afc48b;
+        }
+
+        .login-text {
+            text-align: center;
+            margin-top: 25px;
+            color: #54705b;
+        }
+
+        a {
+            color: #245f3e;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="signup-box">
+
+        <div class="logo-circle">♥</div>
+
+        <h1>Create Account</h1>
+
+        <p class="subtitle">
+            Join Home for the Aged
+        </p>
+
+        <form onsubmit="registerUser(event)">
+
+            <label for="fullname">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="fullname"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Create a password"
+                required
+            >
+
+            <label for="confirm_password">
+                Confirm Password
+            </label>
+
+            <input
+                type="password"
+                id="confirm_password"
+                placeholder="Confirm your password"
+                required
+            >
+
+            <button type="submit">
+                SIGN UP
+            </button>
+
+        </form>
+
+        <p class="login-text">
+
+            Already have an account?
+
+            <a href="index.html">
+                Login
+            </a>
+
+        </p>
+
+    </div>
+
+    <script>
+
+        function registerUser(event) {
+
+            event.preventDefault();
+
+            const password =
+                document.getElementById("password").value;
+
+            const confirmPassword =
+                document.getElementById("confirm_password").value;
+
+            if (password !== confirmPassword) {
+
+                alert("Passwords do not match.");
+
+                return;
+
+            }
+
+            alert("Registration page is ready. Connect PHP and MySQL to save accounts.");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
